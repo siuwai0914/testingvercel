@@ -2,32 +2,162 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+.game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    min-height: 100vh;
+    background-color: #faf8ef;
   }
+  
+.header {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    max-width: 500px; /* Adjust based on the actual size of the game board */
+    margin-bottom: 20px; /* Spacing between header and board */
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.title {
+    font-size: 5rem;
+    color: #776e65;
+    margin: 0; /* Remove default margins */
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.score-container {
+    background-color: #bbada0;
+    border-radius: 6px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
+
+.score-label {
+    color: #eee4da;
+    font-size: 1.3rem;
+}
+
+.score-value {
+    color: #ffffff;
+    font-size: 2.5rem;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 10px;
+    background-color: #bbada0;
+    border-radius: 4px;
+    padding: 15px;
+}
+
+.tile {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.retry-button {
+    background-color: #bbada0;
+    color: #eee4da;
+    font-size: 1.3rem;
+    border-radius: 6px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.name-input-container{
+    background-color: #eee4da;
+    border-radius: 6px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.name-input{
+    background-color: #f3f0ec;
+    border-radius: 6px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.submit-button{
+    background-color: #bbada0;
+    border-radius: 6px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.game-board-container{
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.scoreboard-container{
+    background-color: #bbada0;
+    border-radius: 6px;
+    padding: 5px;
+    margin: 5px;
+    width: 200px;
+    text-align: center;
+}
+
+.scoreboard-title{
+    color: #eee4da;
+    font-size: 1.5rem;
+}
+
+.scoreboard-item{
+    text-align: left;
+    background-color: #eee4da;
+    border-radius: 6px;
+    padding: 10px;
+    margin: 10px;
+}
+
+.scoreboard-score{
+    float:right;
+}
+
+.tile-popup{
+    scale: 1.1;
+}
+
+.time-attack-button{
+    background-color: #bbada0;
+    color: #fff;
+    border-radius: 6px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.normal-mode-button{
+    background-color: #bbada0;
+    color: #fff;
+    border-radius: 6px;
+    padding: 5px;
+    margin: 5px;
+}
+
+.timer-container {
+    background-color: #bbada0;
+    border-radius: 6px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.timer-value {
+    color: #ffffff;
+    font-size: 2.5rem;
+}
+
