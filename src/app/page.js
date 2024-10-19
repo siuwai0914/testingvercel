@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from 'react';
 import Board from './Component/Board';
+import { Analytics } from "@vercel/analytics/react"
 
 export default function Home() {
     const TIME_LEFT = 60
